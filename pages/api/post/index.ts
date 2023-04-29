@@ -15,8 +15,8 @@ export default async function handle(req, res) {
       title: title,
       content: content,
       author: { 
-        connect: { 
-            email: 'leoluizoliveira123@gmail.com' } },      //precisa deixar o emial publico no github pra acessar, como é só pra teste deixei o meu email mesmo
+        connect: {                                //session?.user?.email
+            email: session?.user?.email } },      //precisa deixar o emial publico no github pra acessar, como é só pra teste deixei o meu email mesmo
     },
   });
   res.json(result);
